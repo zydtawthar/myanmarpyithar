@@ -1,9 +1,11 @@
 #! /bin/bash
 printf "Installing Linux RDP Please Wait... " >&2
 {
-sudo useradd -m ThanHtikeSwe
-sudo adduser ThanHtikeSwe sudo
+sudo adduser ThanHtikeSwe
+id ThanHtikeSwe
 usermod -aG sudo ThanHtikeSwe
+groups ThanHtikeSwe
+su ThanHtikeSwe
 echo 'ThanHtikeSwe:ths' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
@@ -19,7 +21,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
-sudo apt install qbittorrent nano -y
+sudo apt install qbittorrent
 sudo adduser ThanHtikeSwe chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
