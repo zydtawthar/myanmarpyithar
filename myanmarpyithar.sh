@@ -4,9 +4,6 @@ printf "Installing Linux RDP Please Wait... " >&2
 sudo useradd -m ThanHtikeSwe
 sudo adduser ThanHtikeSwe sudo
 usermod -aG sudo ThanHtikeSwe
-id ThanHtikeSwe
-groups ThanHtikeSwe
-su ThanHtikeSwe
 echo 'ThanHtikeSwe:ths' | sudo chpasswd
 sed -i 's/\/bin\/sh/\/bin\/bash/g' /etc/passwd
 sudo apt-get update
