@@ -17,11 +17,10 @@ sudo apt install --assume-yes xscreensaver
 sudo systemctl disable lightdm.service
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
-sudo apt install --assume-yes --fix-broken
 sudo apt install nautilus nano -y 
 sudo apt install qbittorrent nano -y
 sudo apt-get install xfce4-terminal
-sudo update-alternatives --config x-terminal-emulator
+sudo apt install --assume-yes --fix-broken
 sudo adduser ThanHtikeSwe chrome-remote-desktop
 } &> /dev/null &&
 printf "\nSetup Complete " >&2 ||
